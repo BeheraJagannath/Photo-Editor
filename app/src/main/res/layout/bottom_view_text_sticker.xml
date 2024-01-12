@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addStickerBtn"
+            android:layout_width="50dp"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            android:layout_height="0dp"
+            android:layout_marginBottom="2dp"
+            app:strokeColor="@android:color/darker_gray"
+            android:backgroundTint="@android:color/transparent"
+            android:stateListAnimator="@null"
+            app:icon="@drawable/ic_brush_vector"
+            app:iconTint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/text_tool_view_pager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+<!--        <com.google.android.material.tabs.TabLayout-->
+<!--            android:id="@+id/text_sticker_tab_layout"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/addStickerBtn"-->
+<!--            android:layout_marginHorizontal="5dp"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:background="@drawable/rectangle_drawle"-->
+<!--            style="@style/paint_tab_layout_style"-->
+<!--            app:tabIndicator="@null"-->
+<!--            app:tabIndicatorGravity="stretch"-->
+<!--            app:tabMode="fixed"-->
+<!--            app:tabRippleColor="@null" />-->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/text_sticker_tab_layout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            style="@style/paint_tab_layout_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintStart_toEndOf="@+id/addStickerBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rectangle_drawle"
+            app:tabIndicatorGravity="stretch"
+            app:tabMode="fixed"
+            app:tabRippleColor="@null">
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/text_tool_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_sticker_tab_layout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

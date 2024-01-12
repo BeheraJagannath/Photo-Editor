@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.neweditor.fragment.Home_fragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home_fragment" >
+
+        <action
+            android:id="@+id/homeFragment_to_EditScreenFragment"
+            app:destination="@id/editScreenFragment"/>
+        <action
+            android:id="@+id/homeFragment_to_FilterFragment"
+            app:destination="@id/filterFragment"/>
+        <action
+            android:id="@+id/homeFragment_to_cropFragment"
+            app:destination="@id/cropFragment"/>
+
+        <action
+            android:id="@+id/homeFragment_to_collageSelectorFragment"
+            app:destination="@id/collageSelectorFragment" />
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/editScreenFragment"
+        android:name="com.example.neweditor.fragment.EditscreenFragment"
+        android:label="editFragment"
+        tools:layout="@layout/fragment_editscreen">
+
+        <action
+            android:id="@+id/editFragment_to_cropFragment"
+            app:destination="@id/cropFragment"/>
+        <action
+            android:id="@+id/editFragment_to_rotateFragment"
+            app:destination="@id/rotateFragment"/>
+        <action
+            android:id="@+id/editFragment_to_adjustFragment"
+            app:destination="@id/adjustFragment"/>
+        <action
+            android:id="@+id/editFragment_to_paintFragment"
+            app:destination="@id/paintFragment"/>
+        <action
+            android:id="@+id/editFragment_to_filterFragment"
+            app:destination="@id/filterFragment"/>
+        <action
+            android:id="@+id/editFragment_to_stickerTextFragment"
+            app:destination="@id/stickerTextFragment"/>
+        <action
+            android:id="@+id/editFragment_to_stickerFragment"
+            app:destination="@id/strickerFragment"/>
+        <argument
+            android:name="imgData"
+            app:argType="com.example.neweditor.data.CommonParcelData" />
+        <action
+            android:id="@+id/editFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/cropFragment"
+        android:name="com.example.neweditor.fragment.CropFragment"
+        android:label="CropFragment"
+        tools:layout="@layout/fragment_crop">
+
+        <action
+            android:id="@+id/cropFragment_to_editFragment"
+            app:destination="@id/editScreenFragment"
+            app:popUpTo="@id/homeFragment"/>
+
+        <argument
+            android:name="imgData"
+            app:argType="com.example.neweditor.data.CommonParcelData" />
+        <action
+            android:id="@+id/cropFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/rotateFragment"
+        android:name="com.example.neweditor.fragment.RotateFragment"
+        android:label="CropFragment"
+        tools:layout="@layout/fragment_rotate">
+
+        <action
+            android:id="@+id/rotateFragment_to_editFragment"
+            app:destination="@id/editScreenFragment"
+            app:popUpTo="@id/homeFragment"/>
+        <argument
+            android:name="imgData"
+            app:argType="com.example.neweditor.data.CommonParcelData" />
+
+        <action
+            android:id="@+id/rotateFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/adjustFragment"
+        android:name="com.example.neweditor.fragment.AdjustFragment"
+        android:label="AdjustFragment"
+        tools:layout="@layout/fragment_adjust">
+
+        <action
+            android:id="@+id/adjustFragment_to_editFragment"
+            app:destination="@id/editScreenFragment"
+            app:popUpTo="@id/homeFragment"/>
+        <argument
+            android:name="imgData"
+            app:argType="com.example.neweditor.data.CommonParcelData" />
+
+        <action
+            android:id="@+id/adjustFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/paintFragment"
+        android:name="com.example.neweditor.fragment.PaintFragment"
+        android:label="PaintFragment"
+        tools:layout="@layout/fragment_paint">
+
+        <action
+            android:id="@+id/paintFragment_to_editFragment"
+            app:destination="@id/editScreenFragment"
+            app:popUpTo="@id/homeFragment"/>
+        <argument
+            android:name="imgData"
+            app:argType="com.example.neweditor.data.CommonParcelData" />
+
+        <action
+            android:id="@+id/paintFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.neweditor.fragment.FilterFragment"
+        android:label="FilterFragment"
+        tools:layout="@layout/fragment_filter">
+
+        <action
+            android:id="@+id/filterFragment_to_editFragment"
+            app:destination="@id/editScreenFragment"
+            app:popUpTo="@id/homeFragment"/>
+        <argument
+            android:name="imgData"
+            app:argType="com.example.neweditor.data.CommonParcelData" />
+
+        <action
+            android:id="@+id/filterFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/stickerTextFragment"
+        android:name="com.example.neweditor.fragment.StickerTextFragment"
+        android:label="StickerTextFragment"
+        tools:layout="@layout/fragment_stickertext">
+
+        <action
+            android:id="@+id/stickerTextFragment_to_editFragment"
+            app:destination="@id/editScreenFragment"
+            app:popUpTo="@id/homeFragment"/>
+        <argument
+            android:name="imgData"
+            app:argType="com.example.neweditor.data.CommonParcelData" />
+
+        <action
+            android:id="@+id/stickerTextFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/strickerFragment"
+        android:name="com.example.neweditor.fragment.StickerFragment"
+        android:label="StrickerFragment"
+        tools:layout="@layout/fragment_sticker">
+
+        <action
+            android:id="@+id/strickerFragment_to_editFragment"
+            app:destination="@id/editScreenFragment"
+            app:popUpTo="@id/homeFragment"/>
+        <argument
+            android:name="imgData"
+            app:argType="com.example.neweditor.data.CommonParcelData" />
+
+        <action
+            android:id="@+id/strickerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/collageSelectorFragment"
+        android:name="com.example.neweditor.fragment.CollageSelectorFragment"
+        android:label="CollageSelectorFragment"
+        tools:layout="@layout/fragment_collage_selector">
+
+        <action
+            android:id="@+id/collageSelectorFragment_to_mainEditScreenFragment"
+            app:destination="@id/editScreenFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.example.neweditor.data.CollageSelectorData" />
+        <action
+            android:id="@+id/collageSelectorFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+
+</navigation>

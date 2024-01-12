@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="onClick"
+            type="com.example.neweditor.fragment.interfacee.CropListener" />
+        <variable
+            name="cropViewModel"
+            type="com.example.neweditor.viewModel.CropScreenViewModel" />
+
+        <import type="android.view.View"/>
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CropFragment">
+
+    <RelativeLayout
+        android:id="@+id/edit_rel"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/crop_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:onClick="@{()->onClick.cropBack()}"
+            android:padding="10dp"
+            android:src="@drawable/ic_back_vector" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/crop_save"
+            android:layout_toEndOf="@+id/crop_back"
+            android:gravity="center"
+            android:text="Crop"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/crop_save"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp"
+            android:onClick="@{()->onClick.cropSave()}"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/image_save_vector" />
+    </RelativeLayout>
+
+
+    <com.isseiaoki.simplecropview.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:visibility="@{cropViewModel.isImgLoading ? View.GONE : View.VISIBLE}"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_rel"
+        app:layout_constraintVertical_bias="0.0"
+        app:scv_background_color="#1C1C1C"
+        app:scv_crop_mode="fit_image"
+        app:scv_frame_color="?attr/colorSecondary"
+        app:scv_frame_stroke_weight="1dp"
+        app:scv_guide_color="?attr/colorSecondaryVariant"
+        app:scv_guide_show_mode="show_always"
+        app:scv_guide_stroke_weight="1dp"
+        app:scv_handle_color="?attr/colorSecondary"
+        app:scv_handle_show_mode="not_show"
+        app:scv_handle_size="8dp"
+        app:scv_min_frame_size="50dp"
+        app:scv_overlay_color="#aa1c1c1c"
+        app:scv_touch_padding="16dp" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/crop_navigation_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/crop_free"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:onClick="@{()->onClick.cropFree()}"
+                android:layout_marginHorizontal="7dp"
+                android:src="@drawable/crop_free" />
+            <ImageView
+                android:id="@+id/crop_circle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:onClick="@{()->onClick.cropCircle()}"
+                android:layout_marginHorizontal="7dp"
+                android:src="@drawable/crop_circle" />
+            <ImageView
+                android:id="@+id/one_one"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:onClick="@{()->onClick.cropOneOne()}"
+                android:layout_marginHorizontal="7dp"
+                android:src="@drawable/one_one" />
+            <ImageView
+                android:id="@+id/three_four"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:onClick="@{()->onClick.cropThreeFour()}"
+                android:layout_marginHorizontal="7dp"
+                android:src="@drawable/three_four" />
+            <ImageView
+                android:id="@+id/four_three"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:onClick="@{()->onClick.cropFourThree()}"
+                android:layout_marginHorizontal="7dp"
+                android:src="@drawable/four_three" />
+            <ImageView
+                android:id="@+id/two_three"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="@{()->onClick.cropTwoThree()}"
+                android:padding="5dp"
+                android:layout_marginHorizontal="7dp"
+                android:src="@drawable/two_three" />
+            <ImageView
+                android:id="@+id/nine_sixteen"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="@{()->onClick.cropNineSixteen()}"
+                android:padding="5dp"
+                android:layout_marginHorizontal="7dp"
+                android:src="@drawable/nine_sixteen" />
+            <ImageView
+                android:id="@+id/sixteen_nine"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:onClick="@{()->onClick.cropSixteenNine()}"
+                android:layout_marginHorizontal="7dp"
+                android:src="@drawable/sixteen_nine" />
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

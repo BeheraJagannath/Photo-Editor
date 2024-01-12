@@ -1,0 +1,253 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">New Editor</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="img_transition_unique_name">Main_img_transition_Unique_String</string>
+    <string name="brush_text">Brush</string>
+    <string name="font_item_text">Aa</string>
+    <string name="font_name_alconia">alconia</string>
+    <string name="font_name_acme">acme</string>
+    <string name="font_name_akronim">akronim</string>
+    <string name="font_name_alex">alex</string>
+    <string name="font_name_architects_daughter">architects</string>
+    <string name="font_name_atomic_age">atomic age</string>
+    <string name="font_name_biryani_extralight">biryani</string>
+    <string name="font_name_chewy">chewy</string>
+    <string name="font_name_courgette">courgette</string>
+    <string name="font_name_droid_sans">droid sans</string>
+    <string name="font_name_emoji_font">emoji font</string>
+    <string name="font_name_kalam_light">kalam light</string>
+    <string name="font_name_macondo_swash_caps">macondo </string>
+    <string name="font_name_meie_script">meie script</string>
+    <string name="add_text">Add Text</string>
+    <string name="Default">Default</string>
+    <string name="colorViewPager_name">Color</string>
+    <string name="fontViewPager_name">Font</string>
+    <string name="animal">Animal</string>
+    <string name="facial">Facial</string>
+    <string name="cartoon">Cartoon</string>
+    <string name="food">Food</string>
+    <string name="words">Words</string>
+    <string name="Vignette">Vignette</string>
+    <string name="cache_img_name">cache_img_name</string>
+    <string name="Flip_Collage_Edit">Flip</string>
+    <string name="Rotate_Collage_Edit">Rotate</string>
+    <string name="Mirror_Collage_Edit">Mirror</string>
+    <string name="crop">Crop</string>
+
+
+    <string-array name="colors">
+        <item>#F44336</item>
+        <item>#E91E63</item>
+        <item>#3F51B5</item>
+        <item>#ff33cc</item>
+        <item>#ff6666</item>
+        <item>#1E88E5</item>
+
+        <item>#F4511E</item>
+        <item>#546E7A</item>
+        <item>#43A047</item>
+        <item>#0066cc</item>
+        <item>#B211ED</item>
+        <item>#ED8411</item>
+        <item>#ED1192</item>
+        <!--        i added from-->
+        <item>#ABE424</item>
+        <item>#1AD3E6</item>
+        <item>#8A6404</item>
+        <item>#C98DDF</item>
+        <item>#045E09</item>
+        <item>#0E5981</item>
+
+        <!--        xxxx-->
+        <item>#CE70F1</item>
+
+    </string-array>
+    <declare-styleable name="StickerView">
+        <attr name="showIcons" format="boolean" />
+        <attr name="showBorder" format="boolean" />
+        <attr name="bringToFrontCurrentSticker" format="boolean" />
+        <attr name="borderColor" format="color" />
+        <attr name="borderAlpha" format="integer" />
+    </declare-styleable>
+    <bool name="large_layout" tools:ignore="MissingDefaultResource">false</bool>
+
+    <integer-array name="animal_photo">
+        <item>@drawable/animal_bear1</item>
+        <item>@drawable/animal_cat1</item>
+        <item>@drawable/animal_deer1</item>
+        <item>@drawable/animal_dog1</item>
+        <item>@drawable/animal_fox1</item>
+        <item>@drawable/animal_bee1</item>
+        <item>@drawable/animal_frog1</item>
+        <item>@drawable/animal_hippo1</item>
+        <item>@drawable/animal_tiger1</item>
+        <item>@drawable/animal_fox2</item>
+        <item>@drawable/animal_lamb1</item>
+        <item>@drawable/animal_hippo2</item>
+        <item>@drawable/animal_panda1</item>
+        <item>@drawable/animal_rat1</item>
+        <item>@drawable/animal_sheep</item>
+        <item>@drawable/animal_tiger2</item>
+        <item>@drawable/animal_hen</item>
+        <item>@drawable/animal_donkey</item>
+
+        <item>@drawable/words_bang</item>
+        <item>@drawable/words_yeah</item>
+        <item>@drawable/words_blog</item>
+        <item>@drawable/words_boom</item>
+        <item>@drawable/words_happy_birthday1</item>
+        <item>@drawable/words_happy_birthday2</item>
+        <item>@drawable/words_happy_birthday3</item>
+        <item>@drawable/words_yes</item>
+        <item>@drawable/words_legacy</item>
+        <item>@drawable/words_win1</item>
+        <item>@drawable/words_wow</item>
+
+        <item>@drawable/food_birthday_cake_1</item>
+        <item>@drawable/food_birthday_cake_2</item>
+        <item>@drawable/food_birthday_cake_3</item>
+        <item>@drawable/food_cupcake</item>
+        <item>@drawable/food_cupcake_with_cherry</item>
+        <item>@drawable/food_ice_cream_1</item>
+        <item>@drawable/food_ice_cream2</item>
+        <item>@drawable/food_ice_cream3</item>
+        <item>@drawable/food_ice_cream_4</item>
+        <item>@drawable/food_pizza1</item>
+        <item>@drawable/food_pizza2</item>
+
+        <item>@drawable/fun_stool</item>
+        <item>@drawable/fun_star</item>
+        <item>@drawable/fun_star2</item>
+        <item>@drawable/fun_rainbow</item>
+
+        <item>@drawable/facial_1</item>
+        <item>@drawable/facial_2</item>
+        <item>@drawable/facial_3</item>
+        <item>@drawable/facial_4</item>
+        <item>@drawable/facial_5</item>
+        <item>@drawable/facial_6</item>
+        <item>@drawable/facial_7</item>
+        <item>@drawable/facial_8</item>
+        <item>@drawable/facial_9</item>
+        <item>@drawable/facial_10</item>
+        <item>@drawable/facial_11</item>
+        <item>@drawable/facial_12</item>
+        <item>@drawable/facial_13</item>
+
+
+    </integer-array>
+
+
+    <integer-array name="words_photo">
+        <item>@drawable/words_bang</item>
+        <item>@drawable/words_yeah</item>
+        <item>@drawable/words_blog</item>
+        <item>@drawable/words_boom</item>
+        <item>@drawable/words_happy_birthday1</item>
+        <item>@drawable/words_happy_birthday2</item>
+        <item>@drawable/words_happy_birthday3</item>
+        <item>@drawable/words_yes</item>
+        <item>@drawable/words_legacy</item>
+        <item>@drawable/words_win1</item>
+        <item>@drawable/words_wow</item>
+    </integer-array>
+
+    <integer-array name="foods_photo">
+        <item>@drawable/food_birthday_cake_1</item>
+        <item>@drawable/food_birthday_cake_2</item>
+        <item>@drawable/food_birthday_cake_3</item>
+        <item>@drawable/food_cupcake</item>
+        <item>@drawable/food_cupcake_with_cherry</item>
+        <item>@drawable/food_ice_cream_1</item>
+        <item>@drawable/food_ice_cream2</item>
+        <item>@drawable/food_ice_cream3</item>
+        <item>@drawable/food_ice_cream_4</item>
+        <item>@drawable/food_pizza1</item>
+        <item>@drawable/food_pizza2</item>
+
+    </integer-array>
+
+    <integer-array name="fun_photo">
+        <item>@drawable/fun_stool</item>
+        <item>@drawable/fun_star</item>
+        <item>@drawable/fun_star2</item>
+        <item>@drawable/fun_rainbow</item>
+
+    </integer-array>
+
+
+    <integer-array name="facial_photo">
+        <item>@drawable/facial_1</item>
+        <item>@drawable/facial_2</item>
+        <item>@drawable/facial_3</item>
+        <item>@drawable/facial_4</item>
+        <item>@drawable/facial_5</item>
+        <item>@drawable/facial_6</item>
+        <item>@drawable/facial_7</item>
+        <item>@drawable/facial_8</item>
+        <item>@drawable/facial_9</item>
+        <item>@drawable/facial_10</item>
+        <item>@drawable/facial_11</item>
+        <item>@drawable/facial_12</item>
+        <item>@drawable/facial_13</item>
+    </integer-array>
+
+    <dimen name="ucrop_padding_crop_frame">16dp</dimen>
+    <dimen name="ucrop_size_dot_scale_text_view">8dp</dimen>
+    <dimen name="ucrop_default_crop_frame_stoke_width">1dp</dimen>
+    <dimen name="ucrop_default_crop_grid_stoke_width">1dp</dimen>
+    <dimen name="ucrop_default_crop_rect_corner_touch_threshold">30dp</dimen>
+    <dimen name="ucrop_default_crop_rect_min_size">100dp</dimen>
+    <dimen name="ucrop_default_crop_rect_corner_touch_area_line_length">10dp</dimen>
+    <dimen name="btn_size_collage_edit_view_pager">40dp</dimen>
+
+    <dimen name="ucrop_width_middle_wheel_progress_line">4dp</dimen>
+    <dimen name="ucrop_width_horizontal_wheel_progress_line">2dp</dimen>
+    <dimen name="ucrop_height_horizontal_wheel_progress_line">25dp</dimen>
+    <dimen name="ucrop_margin_horizontal_wheel_progress_line">10dp</dimen>
+
+    <declare-styleable name="ucrop_UCropView">
+
+        <!--Crop image view-->
+        <attr name="ucrop_aspect_ratio_x" format="float" />
+        <attr name="ucrop_aspect_ratio_y" format="float" />
+
+        <!--Overlay view-->
+        <attr name="ucrop_show_oval_crop_frame" format="boolean" />
+        <attr name="ucrop_circle_dimmed_layer" format="boolean" />
+        <attr name="ucrop_dimmed_color" format="color" />
+
+        <attr name="ucrop_grid_stroke_size" format="dimension" />
+        <attr name="ucrop_grid_color" format="color" />
+        <attr name="ucrop_grid_row_count" format="integer" />
+        <attr name="ucrop_grid_column_count" format="integer" />
+        <attr name="ucrop_show_grid" format="boolean" />
+
+        <attr name="ucrop_frame_stroke_size" format="dimension" />
+        <attr name="ucrop_frame_color" format="color" />
+        <attr name="ucrop_show_frame" format="boolean" />
+
+    </declare-styleable>
+
+    <declare-styleable name="ucrop_AspectRatioTextView">
+
+        <attr name="ucrop_artv_ratio_title" format="string" />
+
+        <attr name="ucrop_artv_ratio_x" format="float" />
+        <attr name="ucrop_artv_ratio_y" format="float" />
+
+    </declare-styleable>
+
+    <declare-styleable name="RulerView">
+        <attr name="rulerStickColor" format="color" />
+        <attr name="rulerMidlineColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="FloatSeekBar">
+        <attr name="floatMax" format="float" />
+        <attr name="floatMin" format="float" />
+    </declare-styleable>
+
+
+</resources>

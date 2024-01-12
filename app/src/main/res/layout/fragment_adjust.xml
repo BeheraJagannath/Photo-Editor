@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="adjustViewModel"
+            type="com.example.neweditor.viewModel.AdjustScreenViewModel" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AdjustFragment">
+    <RelativeLayout
+        android:id="@+id/adjust_rel"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/adjust_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_back_vector" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/adjust_save"
+            android:layout_toEndOf="@+id/adjust_back"
+            android:gravity="center"
+            android:text="Adjust"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/adjust_save"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/image_save_vector" />
+    </RelativeLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="@{adjustViewModel.isImgLoading ? View.VISIBLE : View.GONE}"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:indeterminateTint="@color/bottom_navbar_icon_style_for"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adjust_rel"/>
+
+    <ImageView
+        android:id="@+id/render_script_img_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="@{adjustViewModel.isImgLoading ? View.GONE : View.VISIBLE}"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adjust_rel" />
+
+    <TextView
+        android:id="@+id/adjust_percent_indigator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/render_script_img_id"
+        app:layout_constraintEnd_toEndOf="@+id/render_script_img_id"
+        app:layout_constraintStart_toStartOf="@+id/render_script_img_id"
+        app:layout_constraintTop_toTopOf="@+id/render_script_img_id"
+        tools:text="20%"
+        tools:visibility="visible" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.example.neweditor.customView.RulerView
+            android:id="@+id/ruler_view"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            app:rulerMidlineColor="#E63636"
+            app:rulerStickColor="@color/primaryLightColorForDark" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+
+            android:background="@color/white"
+            app:itemIconTint="@color/bottom_navbar_icon_style_for_active"
+            app:itemRippleColor="@null"
+            app:itemTextColor="@color/bottom_navbar_icon_style_for_active"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/adjust_bottom_nav_menu_item" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

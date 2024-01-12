@@ -1,0 +1,2 @@
+com/google/android/renderscript/BuildConfig.java
+ com.google.android.renderscript.BuildConfig
